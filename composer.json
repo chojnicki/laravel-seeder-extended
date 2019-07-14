@@ -1,0 +1,20 @@
+{
+    "name": "chojnicki/laravel-seeder-extended",
+    "description": "Extend functionality of Seeder with helpful methods and debug info.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chojnicki",
+            "email": "lukchojnicki@gmail.com"
+        }
+    ],
+    "require": {
+        "chojnicki/laravel-seeder-debugger": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chojnicki\\LaravelSeederExtended\\": "src/"
+        }
+    }
+}
