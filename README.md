@@ -47,11 +47,6 @@ Records will be inserted sorted from the oldest to newest. You can disable this 
 $this->insertMultiple($posts);
 ```
 
-Note: Because this will use toArray() on models and raw Insert there can be conflicts with models that are using castings, 
-relations and other functionality that depends on Eloquent's save().
-If there are any problems - set data that doesn't work manually for example instead of 
-``$post->user()->associate($user)`` use ``$post->user_id = $user->id``
-
 
 
 ### setRandomDate($model, $max = 15552000)
