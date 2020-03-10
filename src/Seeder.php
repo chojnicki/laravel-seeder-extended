@@ -24,7 +24,11 @@ abstract class Seeder extends \Chojnicki\LaravelSeederDebugger\Seeder
         if ($sorted) $collection = $collection->sortBy('created_at');
 
         foreach ($collection->chunk($chunkSize) as $chunk) { // insert multiple models in single query
-            DB::table($table)->insert($chunk->toArray());
+            $items = [];
+            foreach ($chunk as $model) {
+                $items[] = $model->getAttributes();
+            }
+            DB::table($table)->insert($items);
         }
     }
 
