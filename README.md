@@ -1,4 +1,4 @@
-# Laravel Seeder Extends
+# Laravel Seeder Extended
 
 Extend default Seeder with extra funcionality.
 
